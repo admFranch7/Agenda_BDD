@@ -3,12 +3,22 @@
     <ion-title>
       Ionic Blank
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="clickAdd()"> 
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    <button ion-button block (click)="click()">Picar</button>
-  </p>
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item (click)="clickCc(contacto)" *ngFor="let contacto of contactos">
+      <ion-avatar item-start>
+        <img src={{contacto.avatar}}>
+      </ion-avatar>
+      <h2>{{contacto.nombre}}</h2>
+      <h3>{{contacto.telefono}}</h3>
+    </ion-item>
+  </ion-list>
 </ion-content>
