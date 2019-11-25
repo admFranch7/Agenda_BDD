@@ -65,7 +65,6 @@ export class EditarPage {
     }, error => {console.log(JSON.stringify(error));
       this.navCtrl.pop();
     });
-    this.navCtrl.pop();
   }
 
   clickDisscard() {
