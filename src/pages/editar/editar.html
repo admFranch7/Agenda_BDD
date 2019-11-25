@@ -10,7 +10,10 @@
     </ion-navbar>
   </ion-header>
   
-  <ion-content padding>
+  <ion-content padding style="background-color: dimgray;">
+    <ion-item style="background-color: #166088;" text-wrap>
+        <p style="color: rgb(0, 255, 229);">Ingrese la información nueva en el campo que desea modificar</p>
+    </ion-item>
     <ion-list>
       <ion-item>
         <ion-label floating>Nombre</ion-label>
@@ -49,8 +52,13 @@
       </ion-item>
   
     </ion-list>
-    <button ion-button block>
-      <ion-icon icon-start name="build"> Guardar cambios</ion-icon>
-    </button>
+    <ion-buttons>
+      <button start ion-button (click)="clickAcept()">
+        <ion-icon icon-start name="build"> Guardar</ion-icon>
+      </button>
+      <button end ion-button color="danger" (click)="clickDisscard()">
+        <ion-icon icon-start name="close"> Descartar</ion-icon>
+      </button>
+    </ion-buttons>
   </ion-content>
   
