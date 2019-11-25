@@ -10,8 +10,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card>
+<ion-content padding style="background-color: rgb(100, 1, 100);">
+  <ion-card style="background-color: dimgrey;">
     <ion-card-content>
       <ion-item>
         <img src="{{contacto.avatar}}">
@@ -19,11 +19,23 @@
       <ion-item>
         <h1>{{contacto.telefono}}</h1>
       </ion-item>
-      <ion-item>
-        <h2>{{contacto.correo}}</h2>
-        <p>{{contacto.facebook}}</p>
-        <p>{{contacto.instagram}}</p>
-        <p>{{contacto.twitter}}</p>
+      <ion-item style="background-color: lightgray;">
+        <h2 style="color: black;">{{contacto.correo}}</h2>
+        <p style="color: darkslategrey;">
+          <ion-icon start name="logo-facebook"> 
+            {{contacto.facebook}}
+          </ion-icon>
+        </p>
+        <p style="color: darkslategrey;">
+          <ion-icon start name="logo-instagram"> 
+            {{contacto.instagram}}
+          </ion-icon>
+        </p>
+        <p style="color: darkslategrey;">
+          <ion-icon start name="logo-twitter"> 
+            {{contacto.twitter}}
+          </ion-icon>
+        </p>
       </ion-item>
     </ion-card-content>
   </ion-card>

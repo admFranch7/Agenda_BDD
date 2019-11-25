@@ -11,14 +11,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding style="background-color: #2E5266;">
+<ion-content padding style="background-color: #330006;">
   <ion-list>
-    <ion-item style="background-color: #8C0058;" (click)="clickCc(contacto)" *ngFor="let contacto of contactos">
+    <ion-item style="background-color: #166088;" (click)="clickCc(contacto)" *ngFor="let contacto of contactos">
       <ion-avatar item-start>
         <img src={{contacto.avatar}}>
       </ion-avatar>
-      <h2 style="color: whitesmoke;">{{contacto.nombre}}</h2>
-      <h3 style="color: #646E68;">{{contacto.telefono}}</h3>
+      <h2 style="color: rgb(0, 255, 229);">{{contacto.nombre}}</h2>
+      <h3 style="color: darkturquoise;">{{contacto.telefono}}</h3>
     </ion-item>
   </ion-list>
 </ion-content>
