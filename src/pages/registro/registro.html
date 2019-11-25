@@ -43,8 +43,11 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Avatar</ion-label>
-      <ion-input type= "text"[(ngModel)]="avatar"></ion-input>
+      <ion-label>Avatar</ion-label>
+      <ion-select [(ngModel)]="avatar">
+        <ion-option value="1">Hombre</ion-option>
+        <ion-option value="2">Mujer</ion-option>
+      </ion-select>
     </ion-item>
 
   </ion-list>

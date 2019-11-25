@@ -39,7 +39,12 @@ export class EditarPage {
       this.contacto['correo'] = this.correo;
     }
     if (this.avatar !== "") {
-      this.contacto['avatar'] = this.avatar;
+      if (this.avatar === "1") {
+        this.contacto['avatar'] = "https://3.bp.blogspot.com/-Y096u66r_U8/WHQebMbvCXI/AAAAAAAAEjU/tqCfSi0FZOApfOFMFr1tmwwLv4-NyO_eACLcB/s1600/myAvatar.png"
+      }
+      else{
+        this.contacto['avatar'] = "https://i.pinimg.com/originals/79/9f/c0/799fc06b357f879e2155e4b5bae92e05.png"
+      }
     }
     if (this.nombre !== "") {
       this.contacto['nombre'] = this.nombre;

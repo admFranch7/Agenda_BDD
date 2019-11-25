@@ -26,29 +26,32 @@
       </ion-item>
   
       <ion-item>
-          <ion-label floating>Correo</ion-label>
+          <ion-label>Correo</ion-label>
           <ion-input title="Prueba?" type= "text" [(ngModel)]="correo">
           </ion-input>
         </ion-item>
       
       <ion-item>
-        <ion-label floating>Facebook</ion-label>
+        <ion-label >Facebook</ion-label>
         <ion-input type= "text"[(ngModel)]="facebook">Prueba</ion-input>
       </ion-item>
   
       <ion-item>
-          <ion-label floating>Instagram</ion-label>
+          <ion-label >Instagram</ion-label>
           <ion-input type= "text"[(ngModel)]="instagram">Prueba</ion-input>
         </ion-item>
       
       <ion-item>
-        <ion-label floating>Twitter</ion-label>
+        <ion-label >Twitter</ion-label>
         <ion-input type= "text"[(ngModel)]="twitter">Prueba</ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-label floating>Avatar</ion-label>
-        <ion-input type= "text"[(ngModel)]="avatar"></ion-input>
+        <ion-label>Avatar</ion-label>
+        <ion-select [(ngModel)]="avatar">
+          <ion-option value="1">Hombre</ion-option>
+          <ion-option value="2">Mujer</ion-option>
+        </ion-select>
       </ion-item>
   
     </ion-list>
