@@ -30,12 +30,7 @@ export class InfoPage {
   rmContacto(id){
     console.log('Eliminar contacto');
 
-    const contacto = {
-      nombre: 'eliminar00',
-      id: id
-    }
-
-    this.http.post('/contacto/contacto/', contacto).subscribe(data => {console.log(JSON.stringify(data));
+    this.http.post('/contacto/delete/', this.contacto).subscribe(data => {console.log(JSON.stringify(data));
       this.navCtrl.pop();
     }, error => {console.log(JSON.stringify(error));
       this.navCtrl.pop();

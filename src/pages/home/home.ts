@@ -8,6 +8,7 @@ import { InfoPage } from '../info/info';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
   contactos:any;
   registroPage = RegistroPage;
@@ -18,13 +19,16 @@ export class HomePage {
   }
 
   ionViewWillEnter(){
-    this.http.get("/contacto/contacto/").subscribe(data => {
+    this.http.get("/contacto/create/").subscribe(data => {
       this.contactos = data;
       console.log(JSON.stringify(data));
     },
      error => {
       console.log(JSON.stringify(error));
     });
+
+    
+
   }
 
   clickAdd(){

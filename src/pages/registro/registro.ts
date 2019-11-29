@@ -53,11 +53,10 @@ export class RegistroPage {
         facebook: this.facebook,
         instagram: this.instagram,
         twitter: this.twitter,
-        editar: "NO"
       };
       console.log(JSON.stringify(contacto));
 
-      this.http.post('/contacto/contacto/', contacto).subscribe(data => {console.log(JSON.stringify(data));
+      this.http.post('/contacto/create/', contacto).subscribe(data => {console.log(JSON.stringify(data));
         this.navCtrl.pop();
       }, error => {console.log(JSON.stringify(error));
         this.navCtrl.pop();

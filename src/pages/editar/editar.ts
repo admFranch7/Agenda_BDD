@@ -22,7 +22,6 @@ export class EditarPage {
   facebook = "";
   instagram = "";
   twitter = "";
-  id = "";
 
   contacto = "";
 
@@ -61,11 +60,10 @@ export class EditarPage {
     if (this.twitter !== "") {
       this.contacto['twitter'] = this.twitter;
     }
-    this.contacto['editar'] = "SI";
     const contact = this.contacto;
     console.log(JSON.stringify(this.contacto));
 
-    this.http.post('/contacto/contacto/', contact).subscribe(data => {console.log(JSON.stringify(data));
+    this.http.post('/contacto/update/', contact).subscribe(data => {console.log(JSON.stringify(data));
       this.navCtrl.pop();
     }, error => {console.log(JSON.stringify(error));
       this.navCtrl.pop();
